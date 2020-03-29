@@ -1,0 +1,65 @@
+.nav-wrapper {
+  padding: 0 2rem;
+}
+.active1 {
+  background: rgba(0, 0, 0, 0.1);
+}
+.active1:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.course {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course h1 {
+  margin-bottom: 2rem;
+}
+.course img {
+  max-width: 600px;
+  height: auto;
+}
+.course p {
+  font-size: 2.5rem;
+}
+.course form {
+  width: 50%;
+}
+.course form button {
+  margin-bottom: 3rem;
+  width: 25%;
+  margin-left: 37%;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-form {
+  margin-bottom: 2rem;
+}
+
+.auth {
+  margin-top: 5rem;
+}
+
+.reg {
+  margin-top: 2rem;
+}
+
+.alert {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: rgba(255, 0, 0, 0.3);
+  color: red;
+}
+
+.avatar {
+  max-width: 300px;
+  height: auto;
+}
+

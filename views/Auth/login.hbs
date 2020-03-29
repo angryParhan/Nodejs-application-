@@ -1,0 +1,66 @@
+<div class="auth">
+  {{#if error}}
+    <p class="alert">{{error}}</p>
+  {{/if}}
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6"><a class="active" href="#login">Log in</a></li>
+        <li class="tab col s6"><a  href="#registration">Sign up</a></li>
+      </ul>
+    </div>
+    <div id="login" class="col s6 offset-s3">
+      <form action="/auth/login" method="post" class="reg">
+        <div class="input-field">
+          <input id="email" type="email" name="email" class="validate" required>
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Enter email"></span>
+        </div>
+
+        <div class="input-field">
+          <input id="pass" type="password" name="pass" class="validate" required>
+          <label for="pass">Password</label>
+          <span class="helper-text" data-error="Enter password"></span>
+        </div>
+
+        <input type="hidden" name="_csrf" value="{{crf}}">
+
+        <p><a href="/auth/reset">Forget password</a></p>
+
+        <button class="btn waves-effect waves-light" type="submit">Log in!</button>
+      </form>
+    </div>
+    <div id="registration" class="col s6 offset-s3">
+      <form action="/auth/signup" method="post" class="reg" novalidate>
+        <div class="input-field">
+          <input id="email_reg" type="email" name="email" class="validate" required>
+          <label for="email_reg">Email</label>
+          <span class="helper-text" data-error="Enter email"></span>
+        </div>
+
+        <div class="input-field">
+          <input id="username" type="text" name="username" class="validate" required>
+          <label for="username">Username</label>
+          <span class="helper-text" data-error="Enter username"></span>
+        </div>
+
+        <div class="input-field">
+          <input id="pass_reg" type="password" name="pass" class="validate" required>
+          <label for="pass_reg">Password</label>
+          <span class="helper-text" data-error="Enter password"></span>
+        </div>
+
+        <div class="input-field">
+          <input id="confirm" type="password" name="confirm" class="validate" required>
+          <label for="confirm">Confirm Password</label>
+          <span class="helper-text" data-error="Enter password"></span>
+        </div>
+
+        <input type="hidden" name="_csrf" value="{{crf}}">
+
+        <button class="btn waves-effect waves-light" type="submit">Sign up!</button>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,43 @@
+<div id="card">
+  <h1>Basket</h1>
+
+  {{#if courses.length}}
+  <table>
+    <head>
+      <tr>
+        <th>Course name</th>
+        <th>quantity</th>
+        <th>actions</th>
+      </tr>
+    </head>
+    <tbody class="table1">
+    {{#each courses}}
+    <tr>
+      <td>{{title}}</td>
+      <td>{{count}}</td>
+      <td>
+        <button
+            class="btn btn-small waves-effect waves-light js-remove"
+            data-id="{{id}}"
+            data-csrf="{{@root.crf}}"
+        >delete</button>
+      </td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  <p class="price"><strong>Total price:</strong> <span class="priceValue">{{price}}</span>$</p>
+
+  <form action="/orders" method="post">
+    <button class="btn" type="submit">Order</button>
+    <input type="hidden" name="_csrf" value="{{crf}}">
+
+  </form>
+
+
+
+  {{else}}
+  <p>Card is empty</p>
+  {{/if}}
+</div>
+
